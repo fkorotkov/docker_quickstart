@@ -4,7 +4,7 @@ docker_builder:
 
 task:
   name: Docker (Kaniko) Build
-  contianer:
+  container:
     image: gcr.io/kaniko-project/executor:latest
   build_script: executor --tarPath /tmp/image.tar --context .
 
