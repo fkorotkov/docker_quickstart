@@ -1,10 +1,6 @@
-docker_builder:
-  name: Docker Build
-  build_script: docker build .
-
 task:
   name: Docker (Kaniko) Build
   container:
     image: gcr.io/kaniko-project/executor:debug
-  build_script: executor --destination=<gcr.io/$CIRRUS_REPO_FULL_NAME:latest> --tarPath=/tmp/image.tar --context=$CIRRUS_WORKING_DIR
+  build_script: executor --destination=/tmp/image.tar --tarPath=/tmp/image.tar --context=$CIRRUS_WORKING_DIR
 
