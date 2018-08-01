@@ -1,0 +1,10 @@
+docker_builder:
+  name: Docker Build
+  build_script: docker build .
+
+task:
+  name: Docker (Kaniko) Build
+  contianer:
+    image: gcr.io/kaniko-project/executor:latest
+  build_script: executor --tarPath /tmp/image.tar --context .
+
