@@ -3,5 +3,5 @@ task:
   container:
     image: gcr.io/kaniko-project/executor:debug
   test_script: echo $OS > test.txt
-  build_script: executor --destination=/tmp/image.tar --tarPath=/tmp/image.tar --context=$CIRRUS_WORKING_DIR
+  build_script: executor --destination=/tmp/image.tar --tarPath=/tmp/image.tar --context=$CIRRUS_WORKING_DIR --verbosity=warn
 
