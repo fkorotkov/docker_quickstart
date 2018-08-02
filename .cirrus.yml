@@ -5,5 +5,5 @@ task:
   env:
     CIRRUS_SHELL: direct
     CIRRUS_WORKING_DIR: /workspace
-  build_script: executor --destination=build:local --tarPath=/cirrus/image.tar
+  build_script: executor --destination=build:local --tarPath=/tmp/image.tar
 
